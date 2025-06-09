@@ -2,6 +2,8 @@
 session_start();
 include_once __DIR__ . '/includes/conexao.php';
 
+$busca = $_GET['busca'] ?? '';
+
 $sql = "SELECT 
             e.id, 
             e.nome, 
@@ -12,13 +14,18 @@ $sql = "SELECT
             e.grau_de_ameaca 
         FROM especie e
         LEFT JOIN ordem o ON e.ordemID = o.id
-        LEFT JOIN familia f ON e.familiaID = f.id";
+        LEFT JOIN familia f ON e.familiaID = f.id
+        WHERE e.nome LIKE ? 
+           OR e.regiao LIKE ? 
+           OR e.habitat LIKE ? 
+           OR e.grau_de_ameaca LIKE ?
+        ORDER BY e.id ASC";
 
-$result = $conn->query($sql);
-
-if ($result === false) {
-    die("Erro na consulta: " . $conn->error);
-}
+$param = "%{$busca}%";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("ssss", $param, $param, $param, $param);
+$stmt->execute();
+$result = $stmt->get_result();
 ?>
 
 <!DOCTYPE html>
@@ -125,6 +132,36 @@ if ($result === false) {
             -webkit-text-fill-color: transparent;
             font-size: 2.2rem;
         }
+
+        .form-busca {
+            margin-top: 1rem;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .form-busca input[type="text"] {
+            flex: 1;
+            padding: 0.6rem 1rem;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            background: #1f1f1f;
+            color: white;
+        }
+
+        .form-busca button {
+            padding: 0.6rem 1.2rem;
+            border: none;
+            border-radius: 20px;
+            background: var(--gradient);
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+
+        .form-busca button:hover {
+            opacity: 0.9;
+        }
     </style>
 </head>
 <body>
@@ -147,12 +184,17 @@ if ($result === false) {
 
     <!-- Hero Section -->
     <main>
-    <!-- Lista de Espécies -->
+        <!-- Lista de Espécies -->
         <section class="container-tabela">
             <div class="topo">
                 <h2>Lista de Espécies</h2>
                 <a class="btn-incluir" href="criar_especie.php">Incluir Espécie</a>
             </div>
+
+            <form method="get" class="form-busca">
+                <input type="text" name="busca" placeholder="Buscar por nome, região, habitat..." value="<?= htmlspecialchars($busca) ?>">
+                <button type="submit">Buscar</button>
+            </form>
 
             <?php if (isset($_SESSION['mensagem']) && is_string($_SESSION['mensagem'])): ?>
                 <div id="mensagem" class="mensagem <?= $_SESSION['tipo'] ?>">
@@ -204,19 +246,17 @@ if ($result === false) {
             <div class="footer-main">
                 <p class="footer-motto">Preservando hoje para existir amanhã.</p>
                 <div class="social-links">
-                    <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61577299915233" class="social-link"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/projeto_preservacao/" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/preservaoambie" class="social-link"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>
 
             <div class="team-section">
                 <h3>Desenvolvido por:</h3>
                 <div class="github-profiles">
-                    <a href="#" class="github-profile"><i class="fab fa-github"></i><span>Integrante 1</span></a>
-                    <a href="#" class="github-profile"><i class="fab fa-github"></i><span>Integrante 2</span></a>
-                    <a href="#" class="github-profile"><i class="fab fa-github"></i><span>Integrante 3</span></a>
+                    <a href="https://github.com/lucastuia" class="github-profile"><i class="fab fa-github"></i><span>Lucas Oliveira</span></a>
+                    <a href="https://github.com/LeonardoGStrey" class="github-profile"><i class="fab fa-github"></i><span>Leonardo Grübel</span></a>
                 </div>
             </div>
         </div>
