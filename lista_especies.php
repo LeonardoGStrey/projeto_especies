@@ -138,7 +138,7 @@ if ($result === false) {
                 <span>Preservação</span>
             </div>
             <div class="nav-links">
-                <a href="#" class="nav-link">Início</a>
+                <a href="site.html" class="nav-link">Início</a>
                 <a href="#" class="nav-link">Sobre</a>
                 <a href="#" class="nav-link">Contato</a>
             </div>
