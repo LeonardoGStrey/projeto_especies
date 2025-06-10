@@ -1,0 +1,113 @@
+/* ajudar.css */
+:root {
+    --verde-escuro: #1e3f20;
+    --verde-medio: #2d5e30;
+    --verde-claro: #4a8c3e;
+    --bege-claro: #f5f0e6;
+    --bege-escuro: #e8d9c5;
+    --branco: #ffffff;
+    --preto: #333333;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: var(--bege-claro);
+    color: var(--preto);
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: var(--verde-escuro);
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 0px 0;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--verde-claro);
+}
+
+h2 {
+    color: var(--verde-medio);
+    font-size: 1.8rem;
+    margin-top: 30px;
+    padding-left: 15px;
+    border-left: 4px solid var(--verde-claro);
+}
+
+h3 {
+    color: var(--preto);
+    font-size: 1.2rem;
+    font-weight: normal;
+    margin: 10px 0 25px 30px;
+    padding: 8px 15px;
+    background-color: var(--branco);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#ongs {
+    background-color: var(--branco);
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 8px;
+    border-left: 4px solid var(--verde-claro);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+#ongs a {
+    color: var(--verde-medio);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#ongs a:hover {
+    color: var(--verde-escuro);
+    text-decoration: underline;
+}
+
+#ongs b {
+    color: var(--verde-escuro);
+}
+
+/* Efeitos de hover para melhor interatividade */
+h3:hover {
+    transform: translateX(5px);
+    transition: transform 0.3s ease;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    h3 {
+        font-size: 1.1rem;
+    }
+}
+.btn-voltar {
+            display: inline-block;
+            background-color: var(--verde-medio);
+            color: var(--branco);
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 20px 0;
+            transition: all 0.3s ease;
+            border: 2px solid var(--verde-medio);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .btn-voltar:hover {
+            background-color: var(--branco);
+            color: var(--verde-medio);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        
