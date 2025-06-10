@@ -36,7 +36,13 @@ h2 {
     padding-left: 15px;
     border-left: 4px solid var(--verde-claro);
 }
-
+#ti{
+    color: var(--verde-medio);
+    font-size: 1.8rem;
+    margin-top: 40px;
+    padding-left: 15px;
+    border-left: 4px solid var(--verde-claro);
+}
 h3 {
     color: var(--preto);
     font-size: 1.2rem;
@@ -51,7 +57,7 @@ h3 {
 #ongs {
     background-color: var(--branco);
     padding: 15px;
-    margin: 15px 0;
+    margin: 19px 0;
     border-radius: 8px;
     border-left: 4px solid var(--verde-claro);
     box-shadow: 0 3px 6px rgba(0,0,0,0.1);
@@ -62,7 +68,9 @@ h3 {
     text-decoration: none;
     transition: color 0.3s ease;
 }
-
+a{
+    text-decoration: none;
+}
 #ongs a:hover {
     color: var(--verde-escuro);
     text-decoration: underline;

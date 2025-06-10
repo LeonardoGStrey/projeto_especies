@@ -36,7 +36,9 @@ h1:first-of-type {
     margin-bottom: 10px;
     border-bottom: none;
 }
-
+#pp{
+    margin-top: -20px;
+}
 /* Subtítulos */
 h2 {
     color: #1B5E20; /* Verde mais escuro */
@@ -120,7 +122,7 @@ h2:has(+ h3) {
             box-shadow: 0 4px 8px rgba(0,0,0,0.15);
         }
 h4 {
-    color: #419359;
+    color: #357949;
     font-style: italic;
     font-weight: normal;
     border-left: 4px solid #bdc3c7;
