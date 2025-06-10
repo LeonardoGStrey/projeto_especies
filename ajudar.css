@@ -61,6 +61,7 @@ h3 {
     border-radius: 8px;
     border-left: 4px solid var(--verde-claro);
     box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    font-size: 26px;
 }
 
 #ongs a {
