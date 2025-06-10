@@ -176,8 +176,7 @@ $result = $stmt->get_result();
             </div>
             <div class="nav-links">
                 <a href="site.html" class="nav-link">Início</a>
-                <a href="#" class="nav-link">Sobre</a>
-                <a href="#" class="nav-link">Contato</a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=projetopreservacaoses@gmail.com" class="nav-link">Contato</a>
             </div>
         </nav>
     </header>
