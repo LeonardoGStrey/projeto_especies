@@ -1,90 +1,132 @@
-/* ajudar.css */
+/* ajudar.css com paleta escura e neon */
+
 :root {
-    --verde-escuro: #1e3f20;
-    --verde-medio: #2d5e30;
-    --verde-claro: #4a8c3e;
-    --bege-claro: #f5f0e6;
-    --bege-escuro: #e8d9c5;
+    --verde-neon: #00ff95;
+    --azul-neon: #00c0ff;
+    --fundo-escuro: #0d1d16;
+    --fundo-card: #141e1a;
+    --texto-claro: #e0f5e9;
+    --cinza: #b2e7d3;
     --branco: #ffffff;
-    --preto: #333333;
+    --preto: #1a1a1a;
 }
 
 body {
     font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    background-color: var(--bege-claro);
-    color: var(--preto);
+    background-color: var(--fundo-escuro);
+    color: var(--texto-claro);
     line-height: 1.6;
-    margin: 0;
+    margin: 0 auto;
     padding: 20px;
     max-width: 1200px;
-    margin: 0 auto;
 }
 
 h1 {
-    color: var(--verde-escuro);
     font-size: 2.5rem;
     text-align: center;
-    margin: 0px 0;
+    margin: 0px 0 30px 0;
     padding-bottom: 15px;
-    border-bottom: 2px solid var(--verde-claro);
+    border-bottom: 2px solid var(--verde-neon);
+    background: linear-gradient(to right, var(--verde-neon), var(--azul-neon));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+h1#frs{
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 0px 0 30px 0;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--verde-neon);
+    background: linear-gradient(to right, var(--verde-neon), var(--azul-neon));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 40px;
 }
 
 h2 {
-    color: var(--verde-medio);
+    color: var(--verde-neon);
     font-size: 1.8rem;
     margin-top: 30px;
     padding-left: 15px;
-    border-left: 4px solid var(--verde-claro);
+    border-left: 4px solid var(--azul-neon);
 }
-#ti{
-    color: var(--verde-medio);
+
+#ti {
+    color: var(--verde-neon);
     font-size: 1.8rem;
     margin-top: 40px;
     padding-left: 15px;
-    border-left: 4px solid var(--verde-claro);
+    border-left: 4px solid var(--azul-neon);
 }
+
 h3 {
-    color: var(--preto);
+    color: var(--cinza);
     font-size: 1.2rem;
     font-weight: normal;
     margin: 10px 0 25px 30px;
-    padding: 8px 15px;
-    background-color: var(--branco);
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 10px 15px;
+    background-color: var(--fundo-card);
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 255, 149, 0.2);
+    transition: transform 0.3s ease;
+    text-align: justify;
+}
+
+h3:hover {
+    transform: translateX(8px);
 }
 
 #ongs {
-    background-color: var(--branco);
+    background-color: var(--fundo-card);
     padding: 15px;
     margin: 19px 0;
     border-radius: 8px;
-    border-left: 4px solid var(--verde-claro);
-    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-    font-size: 26px;
+    border-left: 4px solid var(--verde-neon);
+    box-shadow: 0 3px 6px rgba(0, 255, 149, 0.2);
+    font-size: 1.4rem;
+    color: var(--texto-claro);
 }
 
 #ongs a {
-    color: var(--verde-medio);
+    color: var(--azul-neon);
     text-decoration: none;
     transition: color 0.3s ease;
 }
-a{
-    text-decoration: none;
-}
+
 #ongs a:hover {
-    color: var(--verde-escuro);
+    color: var(--verde-neon);
     text-decoration: underline;
 }
 
 #ongs b {
-    color: var(--verde-escuro);
+    color: var(--verde-neon);
 }
 
-/* Efeitos de hover para melhor interatividade */
-h3:hover {
-    transform: translateX(5px);
-    transition: transform 0.3s ease;
+#dd {
+    color: var(--azul-neon);
+    text-decoration: underline;
+}
+
+/* Botão voltar */
+.btn-voltar {
+    display: inline-block;
+    background: linear-gradient(to right, var(--verde-neon), var(--azul-neon));
+    color: var(--fundo-escuro);
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 40px 0;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 2px 6px rgba(0, 255, 149, 0.3);
+}
+
+.btn-voltar:hover {
+    background: linear-gradient(to left, var(--verde-neon), var(--azul-neon));
+    transform: translateY(-2px);
+    color: var(--branco);
+    box-shadow: 0 4px 10px rgba(0, 255, 149, 0.4);
 }
 
 /* Responsividade */
@@ -99,28 +141,46 @@ h3:hover {
         font-size: 1.1rem;
     }
 }
-.btn-voltar {
-            display: inline-block;
-            background-color: var(--verde-medio);
-            color: var(--branco);
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            margin: 20px 0;
-            transition: all 0.3s ease;
-            border: 2px solid var(--verde-medio);
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
+/* Estilo base do botão */
+#voltar {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 12px 20px;
+    background-color: #2c3e50;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    transform: translateY(20px);
+}
 
-        .btn-voltar:hover {
-            background-color: var(--branco);
-            color: var(--verde-medio);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-        }
-        
-        #dd{
-            color: var(--verde-medio);
-            text-decoration: underline;
-        }
+/* Botão visível quando a página é rolada */
+#voltar.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Efeito hover */
+#voltar:hover {
+    background-color: #1abc9c;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Animação de subida suave */
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+
+#voltar.visible {
+    animation: float 3s ease-in-out infinite;
+}
