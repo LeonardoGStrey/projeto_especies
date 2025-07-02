@@ -95,6 +95,13 @@
     width: 100%;
   }
   
+  /* Hero Section */
+  .hero {
+    text-align: center;
+    padding: 6rem 2rem;
+    margin-top: -45px;
+    
+  }
   
   h1 {
     font-size: 3.5rem;
