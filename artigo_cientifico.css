@@ -8,17 +8,26 @@
     --branco: #ffffff;
 }
 
+header{
+    width: auto;
+    height: auto;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--fundo-escuro);
     color: var(--texto-claro);
     line-height: 1.6;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    width: auto;
+    height: auto;
 }
 
-/* Títulos */
+main{
+    width: auto;
+    height: auto;
+    margin-top: 70px;
+    padding: 20px;
+}
 h1 {
     font-size: 2.5em;
     text-align: center;
@@ -33,7 +42,7 @@ h1#pp {
     margin-top: -20px;
 }
 
-h1#obj{
+h1#obj {
     font-size: 2.5em;
     text-align: center;
     margin: 20px 0;
@@ -41,7 +50,7 @@ h1#obj{
     background: linear-gradient(to right, var(--verde-neon), var(--azul-neon));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-top: 50px
+    margin-top: 50px;
 }
 
 h2 {
@@ -52,7 +61,7 @@ h2 {
     border-bottom: 1px solid var(--azul-neon);
 }
 
-h2#og{
+h2#og {
     color: var(--verde-neon);
     font-size: 1.8em;
     margin-top: 30px;
@@ -61,10 +70,16 @@ h2#og{
 }
 
 h3 {
-    font-size: 1.1em;
+    font-size: 1.2em;
     color: var(--cinza);
     margin: 15px 0;
     text-align: justify;
+    font-weight: normal;
+}
+h3#fo{
+    font-size: 1.2em;
+    color: var(--cinza);
+    text-align: center;
     font-weight: normal;
 }
 
@@ -77,13 +92,13 @@ h4 {
     margin: 20px 0;
 }
 
-/* Lista */
+
 ul {
     list-style-type: disc;
     padding-left: 20px;
 }
 
-/* Botão de voltar */
+
 .btn-voltar {
     display: inline-block;
     background: linear-gradient(to right, var(--verde-neon), var(--azul-neon));
@@ -116,4 +131,80 @@ ul {
     h2 {
         font-size: 1.5em;
     }
+
+    .github-profiles {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+
+footer {
+    background: radial-gradient(circle at top left, rgba(0, 255, 149, 0.05), rgba(0, 0, 0, 0.9));
+    text-align: center;
+    color: var(--texto-claro);
+    margin-top: 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    height: auto;
+    width: auto;
+}
+
+.footer-motto {
+    font-size: 1.5rem;
+    color: var(--verde-neon);
+    margin-bottom: 20px;
+}
+
+
+
+.social-link {
+    font-size: 1.8rem;
+    color: #ccc;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+.social-link:hover {
+    color: var(--verde-neon);
+}
+
+.team-section h3 {
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+.github-profiles {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    
+}
+
+.github-profile {
+    background-color: #111;
+    border-radius: 999px;
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 5px;
+}
+
+.github-profile i {
+    font-size: 1.2rem;
+}
+
+.github-profile:hover {
+    background: linear-gradient(to right, var(--verde-neon), var(--azul-neon));
+    color: var(--fundo-escuro);
+    transform: scale(1.05);
 }
