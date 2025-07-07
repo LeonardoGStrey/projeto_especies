@@ -175,8 +175,8 @@ $result = $stmt->get_result();
                 <span>Preservação</span>
             </div>
             <div class="nav-links">
-                <a href="site.html" class="nav-link">Início</a>
-                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=projetopreservacaoses@gmail.com" class="nav-link">Contato</a>
+                <a href="index.html" class="nav-link">Início</a>
+                    <a target="_blank" href="https://mail.google.com/mail/?view=cm&fs=1&to=projetopreservacaoses@gmail.com" class="nav-link">Contato</a>
             </div>
         </nav>
     </header>
@@ -245,17 +245,17 @@ $result = $stmt->get_result();
             <div class="footer-main">
                 <p class="footer-motto">Preservando hoje para existir amanhã.</p>
                 <div class="social-links">
-                    <a href="https://www.facebook.com/profile.php?id=61577299915233" class="social-link"><i class="fab fa-facebook"></i></a>
-                    <a href="https://www.instagram.com/projeto_preservacao/" class="social-link"><i class="fab fa-instagram"></i></a>
-                    <a href="https://x.com/preservaoambie" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a target="_blank" href="https://www.facebook.com/profile.php?id=61577299915233" class="social-link"><i class="fab fa-facebook"></i></a>
+                    <a target="_blank" href="https://www.instagram.com/projeto_preservacao/" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a target="_blank" href="https://x.com/preservaoambie" class="social-link"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>
 
             <div class="team-section">
                 <h3>Desenvolvido por:</h3>
                 <div class="github-profiles">
-                    <a href="https://github.com/lucastuia" class="github-profile"><i class="fab fa-github"></i><span>Lucas Oliveira</span></a>
-                    <a href="https://github.com/LeonardoGStrey" class="github-profile"><i class="fab fa-github"></i><span>Leonardo Grübel</span></a>
+                    <a target="_blank" href="https://github.com/lucastuia" class="github-profile"><i class="fab fa-github"></i><span>Lucas Oliveira</span></a>
+                    <a target="_blank" href="https://github.com/LeonardoGStrey" class="github-profile"><i class="fab fa-github"></i><span>Leonardo Grübel</span></a>
                 </div>
             </div>
         </div>
