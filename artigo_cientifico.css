@@ -1,234 +1,119 @@
-/* artigo_cientifico.css */
-
-/* Reset e estilos base */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #1a1a1a;
-    margin: 0;
-    padding: 0;
+:root {
+    --verde-neon: #00ff95;
+    --azul-neon: #00c0ff;
+    --texto-claro: #e0f5e9;
+    --fundo-escuro: #0d1d16;
+    --fundo-card: #141e1a;
+    --cinza: #b2e7d3;
+    --branco: #ffffff;
 }
 
-/* Container principal */
 body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--fundo-escuro);
+    color: var(--texto-claro);
+    line-height: 1.6;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-/* Cabeçalho principal */
+/* Títulos */
 h1 {
-    color: #2E7D32; /* Verde escuro */
-    text-align: center;
     font-size: 2.5em;
-    margin-bottom: 0px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #4CAF50; /* Verde */
+    text-align: center;
+    margin: 20px 0;
+    font-weight: bold;
+    background: linear-gradient(to right, var(--verde-neon), var(--azul-neon));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-h1:first-of-type {
-    background-color: #E8F5E9; /* Verde muito claro */
-    padding: 20px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    border-bottom: none;
-}
-#pp{
+h1#pp {
     margin-top: -20px;
 }
-/* Subtítulos */
+
+h1#obj{
+    font-size: 2.5em;
+    text-align: center;
+    margin: 20px 0;
+    font-weight: bold;
+    background: linear-gradient(to right, var(--verde-neon), var(--azul-neon));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 50px
+}
+
 h2 {
-    color: #1B5E20; /* Verde mais escuro */
+    color: var(--verde-neon);
+    font-size: 1.8em;
+    margin-top: 60px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--azul-neon);
+}
+
+h2#og{
+    color: var(--verde-neon);
     font-size: 1.8em;
     margin-top: 30px;
-    padding-bottom: 5px;
-    border-bottom: 1px solid #C8E6C9; /* Verde claro */
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--azul-neon);
 }
 
 h3 {
-    font-weight: normal;
     font-size: 1.1em;
+    color: var(--cinza);
     margin: 15px 0;
     text-align: justify;
+    font-weight: normal;
 }
 
-/* Seções especiais (simulando os cards da imagem) */
-h2:has(+ h3) {
-    background-color: #E8F5E9;
-    padding: 15px;
-    border-radius: 5px;
-    border-left: 5px solid #4CAF50;
-    margin-top: 40px;
+h4 {
+    color: var(--azul-neon);
+    font-style: italic;
+    font-weight: normal;
+    border-left: 4px solid var(--verde-neon);
+    padding-left: 15px;
+    margin: 20px 0;
 }
 
+/* Lista */
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* Botão de voltar */
+.btn-voltar {
+    display: inline-block;
+    background: linear-gradient(to right, var(--verde-neon), var(--azul-neon));
+    color: var(--fundo-escuro);
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 40px 0;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.btn-voltar:hover {
+    background: linear-gradient(to left, var(--verde-neon), var(--azul-neon));
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,255,149,0.4);
+}
 
 /* Responsividade */
 @media (max-width: 768px) {
     body {
         padding: 10px;
     }
-    
+
     h1 {
         font-size: 2em;
     }
-    
+
     h2 {
         font-size: 1.5em;
     }
-}
-
-/* Estilo para simular os cards da imagem */
-.card {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    padding: 20px;
-    margin: 20px 0;
-    border-left: 5px solid #4CAF50;
-}
-
-.card h2 {
-    color: #2E7D32;
-    margin-top: 0;
-    border-bottom: none;
-}
-
-.card p {
-    color: #555;
-    margin-bottom: 15px;
-}
-
-.btn-voltar {
-            display: inline-block;
-            background-color: var(--verde-medio);
-            color: var(--branco);
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            margin: 20px 0;
-            transition: all 0.3s ease;
-            border: 2px solid var(--verde-medio);
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        .btn-voltar:hover {
-            background-color: var(--branco);
-            color: var(--verde-medio);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-        }
-h4 {
-    color: #357949;
-    font-style: italic;
-    font-weight: normal;
-    border-left: 4px solid #bdc3c7;
-    padding-left: 15px;
-    margin: 20px 0;
-}
-
-:root {
-            --verde-escuro: #1e3f20;
-            --verde-medio: #2d5e30;
-            --verde-claro: #4a8c3e;
-            --bege-claro: #f5f0e6;
-            --bege-escuro: #e8d9c5;
-            --branco: #ffffff;
-            --preto: #333333;
-        }
-
-        body {
-            font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background-color: var(--bege-claro);
-            color: var(--preto);
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-            position: relative;
-        }
-
-        /* Estilo do botão voltar */
-        .btn-voltar {
-            display: inline-block;
-            background-color: var(--verde-medio);
-            color: var(--branco);
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-bottom: 30px;
-            transition: all 0.3s ease;
-            border: 2px solid var(--verde-medio);
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        .btn-voltar:hover {
-            background-color: var(--branco);
-            color: var(--verde-medio);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-        }
-
-        /* Estilos dos cards */
-        .card-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            margin: 30px 0;
-        }
-
-        .card {
-            flex: 1 1 300px;
-            background-color: var(--branco);
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-        }
-
-        .card h2 {
-            color: var(--verde-escuro);
-            margin-top: 0;
-            border-left: none;
-            padding-left: 0;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: var(--verde-claro);
-            color: var(--branco);
-            padding: 8px 16px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 10px;
-            transition: all 0.3s ease;
-        }
-
-        .btn:hover {
-            background-color: var(--verde-medio);
-        }
-
-        @media (max-width: 768px) {
-            .card-container {
-                flex-direction: column;
-            }
-            
-            .btn-voltar {
-                padding: 8px 15px;
-                font-size: 0.9rem;
-            }
-        }
-ul {
-  list-style-type: disc;
-  padding-left: 20px;
 }

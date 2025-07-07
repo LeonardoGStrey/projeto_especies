@@ -51,3 +51,4 @@ document.querySelectorAll('a').forEach(link => {
   
   // Initialize particles
   createParticles();
+  
