@@ -81,6 +81,7 @@ h3#fo{
     color: var(--cinza);
     text-align: center;
     font-weight: normal;
+    padding-top: -20px;
 }
 
 h4 {
@@ -118,7 +119,7 @@ ul {
     box-shadow: 0 4px 8px rgba(0,255,149,0.4);
 }
 
-/* Responsividade */
+
 @media (max-width: 768px) {
     body {
         padding: 10px;
@@ -154,7 +155,9 @@ footer {
     color: var(--verde-neon);
     margin-bottom: 20px;
 }
-
+footer h3{
+    margin-top: -10px;
+}
 
 
 .social-link {
@@ -181,22 +184,8 @@ footer {
     justify-content: center;
     gap: 30px;
     flex-wrap: wrap;
+    margin-top: 40px;
     
-}
-
-.github-profile {
-    background-color: #111;
-    border-radius: 999px;
-    padding: 12px 24px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    margin-top: 5px;
 }
 
 .github-profile i {
