@@ -8,7 +8,11 @@
     --branco: #ffffff;
     --preto: #1a1a1a;
 }
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 body {
     font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     background-color: var(--fundo-escuro);
@@ -32,7 +36,7 @@ main h1 {
     padding-bottom: 15px;
     border-bottom: 2px solid var(--verde-neon);
     background: linear-gradient(to right, var(--verde-neon), var(--azul-neon));
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 main h1#frs{
@@ -42,7 +46,7 @@ main h1#frs{
     padding-bottom: 15px;
     border-bottom: 2px solid var(--verde-neon);
     background: linear-gradient(to right, var(--verde-neon), var(--azul-neon));
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-top: 40px;
 }
@@ -189,7 +193,6 @@ main h3:hover {
     animation: float 3s ease-in-out infinite;
 }
 
-
 header {
     position: fixed;
     top: 0;
@@ -197,8 +200,7 @@ header {
     width: 100%;
     z-index: 1000;
     background: linear-gradient(to right, #0f211c, #111);
-    padding: 15px 5px;
-    box-shadow: 0 2px 8px rgba(0, 255, 149, 0.1);
+    
 }
 
 .main-nav {
@@ -265,11 +267,13 @@ footer {
   
   .footer-motto {
     font-size: 1.5rem;
-    color: var(--primary);
     text-align: center;
     letter-spacing: 1px;
     padding-top: 15px;
-  }
+    color: var(--verde-neon);
+    margin-bottom: 20px;
+}
+  
   
   .social-links {
     display: flex;
