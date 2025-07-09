@@ -14,7 +14,7 @@
     box-sizing: border-box;
   }
 body {
-    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;;
     background-color: var(--fundo-escuro);
     color: var(--texto-claro);
     line-height: 1.6;
@@ -194,7 +194,6 @@ main h3:hover {
 }
 
 header {
-    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -209,6 +208,7 @@ header {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
+    height: 80px;
 }
 
 .logo {
