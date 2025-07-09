@@ -20,6 +20,13 @@ header {
     background: linear-gradient(to right, #0f211c, #111);
     
 }
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  margin: 0 auto;
+}
 
 
 
@@ -50,7 +57,7 @@ h1 {
 }
 
 h1#pp {
-    margin-top: -20px;
+    margin-top: -70px;
 }
 
 h1#obj {
