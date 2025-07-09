@@ -5,7 +5,6 @@ include_once __DIR__ . '/includes/conexao.php';
 if (isset($_GET['id']) && is_numeric($_GET['id'])) {
     $id = intval($_GET['id']);
 
-    // Deleta a espécie do banco de dados
     $sql = "DELETE FROM especie WHERE id = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("i", $id);

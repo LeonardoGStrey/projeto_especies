@@ -10,7 +10,6 @@ document.querySelectorAll('a').forEach(link => {
     });
   });
   
-  // Add search functionality
   const searchInput = document.querySelector('.search-input');
   const searchButton = document.querySelector('.search-button');
   
@@ -26,10 +25,8 @@ document.querySelectorAll('a').forEach(link => {
   
   function performSearch(query) {
     console.log('Searching for:', query);
-    // Add your search implementation here
   }
   
-  // Add particle effect
   function createParticles() {
     const particles = document.querySelector('.particles');
     for (let i = 0; i < 50; i++) {
@@ -49,6 +46,5 @@ document.querySelectorAll('a').forEach(link => {
     }
   }
   
-  // Initialize particles
   createParticles();
   

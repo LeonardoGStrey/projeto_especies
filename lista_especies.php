@@ -169,7 +169,6 @@ $result = $stmt->get_result();
 <body>
     <div class="background-animation"></div>
 
-    <!-- Header -->
     <header>
         <nav class="main-nav">
             <div class="logo">
