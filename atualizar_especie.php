@@ -51,6 +51,7 @@ $familias = $conn->query("SELECT * FROM familia ORDER BY nome");
     <meta charset="UTF-8">
     <title>Atualizar Espécie</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <style>
         body {
             font-family: 'Segoe UI', sans-serif;

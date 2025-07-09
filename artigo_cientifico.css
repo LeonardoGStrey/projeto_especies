@@ -7,25 +7,21 @@
     --cinza: #b2e7d3;
     --branco: #ffffff;
 }
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
 header {
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
     background: linear-gradient(to right, #0f211c, #111);
+    padding: auto;
     
-}
-.main-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
-  margin: 0 auto;
 }
 
 
@@ -39,12 +35,10 @@ body {
     height: auto;
 }
 
-main{
-    width: auto;
-    height: auto;
-    margin-top: 70px;
-    padding: 20px;
-    margin-top: 120px;
+main {
+  width: 100%;
+  margin: 110px auto ;
+  padding: 20px;
 }
 h1 {
     font-size: 2.5em;
@@ -53,12 +47,14 @@ h1 {
     font-weight: bold;
     background: linear-gradient(to right, var(--verde-neon), var(--azul-neon));
     background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 h1#pp {
-    margin-top: -70px;
+  margin-top: 30px;
 }
+
 
 h1#obj {
     font-size: 2.5em;
@@ -158,63 +154,128 @@ ul {
 }
 
 
+/* FOOTER */
 footer {
-    background: radial-gradient(circle at top left, rgba(0, 255, 149, 0.05), rgba(0, 0, 0, 0.9));
-    text-align: center;
-    color: var(--texto-claro);
-    margin-top: 25px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    height: auto;
-    width: 100%;
-    top: 0;
-    left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 3rem 2rem;
+  margin-top: -100px;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: auto;
 }
 
 .footer-motto {
-    font-size: 1.5rem;
-    color: var(--verde-neon);
-    margin-bottom: 20px;
-}
-footer h3{
-    margin-top: -10px;
+  font-size: 1.5rem;
+  color: var(--verde-neon);
+  text-align: center;
 }
 
+.social-links {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: -15px;
+}
 
 .social-link {
-    font-size: 1.8rem;
-    color: #ccc;
-    margin: 0 15px;
-    transition: color 0.3s;
+  color: var(--text-muted);
+  font-size: 1.5rem;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .social-link:hover {
-    color: var(--verde-neon);
+  color: var(--primary);
+  transform: translateY(-3px);
+}
+
+.team-section {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .team-section h3 {
-    text-transform: uppercase;
-    font-size: 1.3rem;
-    letter-spacing: 2px;
-    margin-bottom: 20px;
-    color: #ccc;
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .github-profiles {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    margin-top: 40px;
-    width: auto;
-    
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 10px;
 }
 
-.github-profile i {
-    font-size: 1.2rem;
+.github-profile {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem 1.8rem;
+  background: var(--card-bg);
+  color: var(--texto-claro);
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .github-profile:hover {
-    background: linear-gradient(to right, var(--verde-neon), var(--azul-neon));
-    color: var(--fundo-escuro);
-    transform: scale(1.05);
+  background: var(--gradient);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 255, 149, 0.3);
+  border-color: transparent;
+}
+
+.github-profile i {
+  font-size: 1.3rem;
+}
+
+.github-profile span {
+  font-weight: 500;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .main-nav {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  main h1 {
+    font-size: 2rem;
+  }
+
+  main h2 {
+    font-size: 1.5rem;
+  }
+
+  main h3 {
+    font-size: 1.1rem;
+  }
+
+  .github-profiles {
+    flex-direction: column;
+  }
+
+  .footer-motto {
+    font-size: 1.2rem;
+  }
+}
+footer h3#fo{
+    margin-top: -10px;
 }

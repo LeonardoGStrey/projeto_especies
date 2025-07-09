@@ -35,6 +35,7 @@ $result = $stmt->get_result();
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <script type="module" src="script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -163,11 +164,11 @@ $result = $stmt->get_result();
             opacity: 0.9;
         }
     </style>
+    
 </head>
 <body>
     <div class="background-animation"></div>
 
-    <!-- Header -->
     <header>
         <nav class="main-nav">
             <div class="logo">

@@ -38,6 +38,7 @@ $familias = $conn->query("SELECT id, nome FROM familia");
 <head>
     <meta charset="UTF-8">
     <title>Nova Espécie</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <style>
         body {
             font-family: 'Segoe UI', sans-serif;
