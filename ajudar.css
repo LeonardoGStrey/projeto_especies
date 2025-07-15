@@ -19,6 +19,16 @@
   padding: 0;
   box-sizing: border-box;
 }
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: linear-gradient(to right, #0f211c, #111);
+    padding: auto;
+    
+}
 
 body {
   font-family: 'Segoe UI', system-ui, sans-serif;
@@ -218,7 +228,7 @@ footer {
   backdrop-filter: blur(10px);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding: 2rem 1rem;
-  margin-top: -100px;
+  margin-top: -60px;
 }
 
 .footer-content {
@@ -309,7 +319,7 @@ footer {
 
   .nav-links {
     flex-direction: column;
-    gap: 1rem;
+    gap: -1rem;
   }
 
   main h1 {
@@ -352,7 +362,7 @@ html {
 }
 .nav-links {
     display: flex;
-    gap: 2rem;
+    gap: -2rem;
   }
   
   .nav-link {
