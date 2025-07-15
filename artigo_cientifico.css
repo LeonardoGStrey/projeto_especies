@@ -79,19 +79,7 @@ header {
   transform: scale(1.05);
 }
 
-/* ANIMAÇÃO SUAVE NOS BOTÕES DO HEADER */
-.nav-link {
-  text-decoration: none;
-  color: var(--texto-claro);
-  font-weight: 600;
-  transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
-}
 
-.nav-link:hover {
-  color: var(--verde-neon);
-  transform: translateY(-2px);
-  text-shadow: 0 0 6px var(--verde-neon);
-}
 
 
 body {
