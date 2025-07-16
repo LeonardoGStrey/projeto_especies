@@ -15,17 +15,7 @@
     padding: 0;
     box-sizing: border-box;
   }
-  header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-
-    padding: auto;
-  }
-  main{
-    margin-top: ;
-  }
+  
   body {
     font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
     background-color: var(--background);
