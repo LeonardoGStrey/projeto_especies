@@ -332,9 +332,7 @@ $result = $stmt->get_result();
             <?php endif; ?>
         </section>
         
-        <a href="#" class="back-to-top" onclick="scrollToTop()" title="Voltar ao topo">
-            <i class="fas fa-arrow-up"></i>
-        </a>
+        
     </main>
 
     <footer>
