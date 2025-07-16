@@ -15,7 +15,17 @@
     padding: 0;
     box-sizing: border-box;
   }
-  
+  header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    padding: auto;
+  }
+  main{
+    margin-top: ;
+  }
   body {
     font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
     background-color: var(--background);
@@ -499,9 +509,7 @@
 /* Efeito hover para os links de navegação */
 .nav-link {
   position: relative;
-  color: white;
   text-decoration: none;
-  padding: 10px 15px;
   transition: all 0.3s ease;
 }
 
@@ -530,19 +538,15 @@
 .logo a {
   display: flex;
   align-items: center;
-  gap: 8px;
   text-decoration: none;
-  color: white;
   transition: all 0.3s ease;
 }
 
-.logo a:hover {
-  color: #00ff95;
-}
+
 
 .logo a:hover i.fa-leaf {
   transform: scale(1.2);
-  color: #00ff95;
+
 }
 
 .logo i.fa-leaf {
@@ -553,11 +557,8 @@
 /* Botão de voltar ao topo */
 .back-to-top {
   position: fixed;
-  bottom: 20px;
   right: 20px;
   background: linear-gradient(135deg, #2ecc71, #3498db);
-  color: white;
-  width: 50px;
   height: 50px;
   border-radius: 50%;
   display: none;

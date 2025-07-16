@@ -1,94 +1,138 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <title>Preservação da Fauna e Flora</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="style.css" />
-    <script type="module" src="script.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-      <link rel="icon" href="favicon.ico" type="image/x-icon">
-  </head>
-  <body>
-  <div id="topo"></div>
+<head>
+<title>Preservação da Fauna e Flora</title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="style.css" />
+<script type="module" src="script.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<style>
 
+      html {
+
+        scroll-behavior: smooth;
+
+      }
+</style>
+</head>
+<body>
+<div id="topo"></div>
+ 
   <header>
-    <nav class="main-nav">
-      <div class="logo">
-        <a href="index.html">
-          <i class="fas fa-leaf"></i>
-          <span>Preservação</span>
-        </a>
-      </div>
-      <div class="nav-links">
-        <a href="#topo" class="nav-link">Início</a>
-        <a target="_blank" href="https://mail.google.com/mail/?view=cm&fs=1&to=projetopreservacaoses@gmail.com" class="nav-link">Contato</a>
-      </div>
-    </nav>
-  </header>
-
+<nav class="main-nav">
+<div class="logo">
+<a href="index.html">
+<i class="fas fa-leaf"></i>
+<span>Preservação</span>
+</a>
+</div>
+<div class="nav-links">
+<a href="#" class="nav-link" onclick="scrollToTop()">Início</a>
+<a target="_blank" href="https://mail.google.com/mail/?view=cm&fs=1&to=projetopreservacaoses@gmail.com" class="nav-link">Contato</a>
+</div>
+</nav>
+</header>
+ 
     
-    <main>
-      <section class="hero">
-        <h1>Preservação da<br>Fauna do RS</h1>
-        <p class="subtitle">Protegendo a biodiversidade para as futuras gerações</p>
-      </section>
-
+<main>
+<section class="hero">
+<h1>Preservação da<br>Fauna do RS</h1>
+<p class="subtitle">Protegendo a biodiversidade para as futuras gerações</p>
+</section>
+ 
       <section class="features">
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fas fa-map-marked-alt"></i>
+</div>
+<h3>Lista de Espécies</h3>
+<p>Descubra e explore a fauna do Rio Grande do Sul</p>
+<a href="lista_especies.php" class="feature-link1">Explorar <i class="fas fa-arrow-right"></i></a>
+</div>
+ 
         <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-map-marked-alt"></i>
-          </div>
-          <h3>Lista de Espécies</h3>
-          <p>Descubra e explore a fauna do Rio Grande do Sul</p>
-          <a href="lista_especies.php" class="feature-link1">Explorar <i class="fas fa-arrow-right"></i></a>
-        </div>
-
+<div class="feature-icon">
+<i class="fas fa-book-reader"></i>
+</div>
+<h3>Artigo Científico</h3>
+<p>Acesse a pesquisas da fauna do Rio Grande do Sul</p>
+<a href="artigo_cientifico.html" class="feature-link">Ler mais <i class="fas fa-arrow-right"></i></a>
+</div>
+ 
         <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-book-reader"></i>
-          </div>
-          <h3>Artigo Científico</h3>
-          <p>Acesse a pesquisas da fauna do Rio Grande do Sul</p>
-          <a href="artigo_cientifico.html" class="feature-link">Ler mais <i class="fas fa-arrow-right"></i></a>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-hands-helping"></i>
-          </div>
-          <h3>Como Ajudar</h3>
-          <p>Descubra formas de contribuir com a preservação</p>
-          <a href="ajudar.html" class="feature-link">Participar <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </section>
-    </main>
-
+<div class="feature-icon">
+<i class="fas fa-hands-helping"></i>
+</div>
+<h3>Como Ajudar</h3>
+<p>Descubra formas de contribuir com a preservação</p>
+<a href="ajudar.html" class="feature-link">Participar <i class="fas fa-arrow-right"></i></a>
+</div>
+</section>
+</main>
+ 
     <footer>
-      <div class="footer-content">
-        <div class="footer-main">
-          <p class="footer-motto">Preservando hoje para garantir o amanhã</p>
-          <div class="social-links">
-            <a target="_blank" href="https://x.com/preservaoambie" class="social-link"><i class="fab fa-twitter"></i></a>
-            <a target="_blank" href="https://www.instagram.com/projeto_preservacao/" class="social-link"><i class="fab fa-instagram"></i></a>
-            <a target="_blank" href="https://www.facebook.com/profile.php?id=61577299915233" class="social-link"><i class="fab fa-facebook"></i></a>
-          </div>
-        </div>
-        <div class="team-section">
-          <h3>Nossa Equipe</h3>
-          <div class="github-profiles">
-            <a target="_blank" href="https://github.com/lucastuia" class="github-profile" target="_blank">
-              <i class="fab fa-github"></i>
-              <span>Lucas Tuia</span>
-            </a>
-            <a target="_blank" href="https://github.com/LeonardoGStrey" class="github-profile" target="_blank">
-              <i class="fab fa-github"></i>
-              <span>Leonardo Strey</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </footer>
-  </body>
+<div class="footer-content">
+<div class="footer-main">
+<p class="footer-motto">Preservando hoje para garantir o amanhã</p>
+<div class="social-links">
+<a target="_blank" href="https://x.com/preservaoambie" class="social-link"><i class="fab fa-twitter"></i></a>
+<a target="_blank" href="https://www.instagram.com/projeto_preservacao/" class="social-link"><i class="fab fa-instagram"></i></a>
+<a target="_blank" href="https://www.facebook.com/profile.php?id=61577299915233" class="social-link"><i class="fab fa-facebook"></i></a>
+</div>
+</div>
+<div class="team-section">
+<h3>Nossa Equipe</h3>
+<div class="github-profiles">
+<a target="_blank" href="https://github.com/lucastuia" class="github-profile" target="_blank">
+<i class="fab fa-github"></i>
+<span>Lucas Tuia</span>
+</a>
+<a target="_blank" href="https://github.com/LeonardoGStrey" class="github-profile" target="_blank">
+<i class="fab fa-github"></i>
+<span>Leonardo Strey</span>
+</a>
+</div>
+</div>
+</div>
+</footer>
+ 
+    <a href="#" class="back-to-top" onclick="scrollToTop()" title="Voltar ao topo">
+<i class="fas fa-arrow-up"></i>
+</a>
+ 
+    <script>
+
+      function scrollToTop() {
+
+        window.scrollTo({
+
+          top: 0,
+
+          behavior: 'smooth'
+
+        });
+
+      }
+ 
+      window.addEventListener('scroll', function() {
+
+        const backToTopButton = document.querySelector('.back-to-top');
+
+        if (window.pageYOffset > 300) {
+
+          backToTopButton.style.display = 'flex';
+
+        } else {
+
+          backToTopButton.style.display = 'none';
+
+        }
+
+      });
+</script>
+</body>
 </html>
+ 
