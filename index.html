@@ -4,11 +4,16 @@
     <title>Preservação da Fauna e Flora</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <script type="module" src="script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-      <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
   </head>
   <body>
   <div id="topo"></div>
@@ -22,7 +27,7 @@
         </a>
       </div>
       <div class="nav-links">
-        <a href="#topo" class="nav-link">Início</a>
+        <a href="#" class="nav-link" onclick="scrollToTop()">Início</a>
         <a target="_blank" href="https://mail.google.com/mail/?view=cm&fs=1&to=projetopreservacaoses@gmail.com" class="nav-link">Contato</a>
       </div>
     </nav>
@@ -90,5 +95,27 @@
         </div>
       </div>
     </footer>
+
+    <a href="#" class="back-to-top" onclick="scrollToTop()" title="Voltar ao topo">
+      <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script>
+      function scrollToTop() {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      }
+
+      window.addEventListener('scroll', function() {
+        const backToTopButton = document.querySelector('.back-to-top');
+        if (window.pageYOffset > 300) {
+          backToTopButton.style.display = 'flex';
+        } else {
+          backToTopButton.style.display = 'none';
+        }
+      });
+    </script>
   </body>
 </html>
