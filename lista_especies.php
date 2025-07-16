@@ -39,6 +39,18 @@ $result = $stmt->get_result();
     <script type="module" src="script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        header{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: linear-gradient(to right, #0f211c, #111);
+            padding: auto;
+        }
+        main{
+            margin-top: 60px;
+        }
         table {
             width: 100%;
             border-collapse: collapse;
@@ -160,9 +172,30 @@ $result = $stmt->get_result();
             transition: opacity 0.3s;
         }
 
+        .btn-voltar {
+    display: inline-block;
+    background: linear-gradient(to right, var(--verde-neon), var(--azul-neon));
+    color: var(--fundo-escuro);
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 40px 0;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.btn-voltar:hover {
+    background: linear-gradient(to left, var(--verde-neon), var(--azul-neon));
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,255,149,0.4);
+}
         .form-busca button:hover {
             opacity: 0.9;
         }
+        .btn-voltar {
+  animation: bounce 2s infinite ease-in-out;
+}
     </style>
     
 </head>
@@ -171,6 +204,7 @@ $result = $stmt->get_result();
 
     <header>
         <nav class="main-nav">
+            
             <div class="logo">
                 <i class="fas fa-leaf"></i>
                 <span>Preservação</span>
@@ -180,11 +214,15 @@ $result = $stmt->get_result();
                     <a target="_blank" href="https://mail.google.com/mail/?view=cm&fs=1&to=projetopreservacaoses@gmail.com" class="nav-link">Contato</a>
             </div>
         </nav>
+        
     </header>
 
     <!-- Hero Section -->
     <main>
+
         <!-- Lista de Espécies -->
+         <div id="topo"></div>
+         
         <section class="container-tabela">
             <div class="topo">
                 <h2>Lista de Espécies</h2>
@@ -239,6 +277,7 @@ $result = $stmt->get_result();
                 <p style="text-align: center; color: var(--text-muted);">Nenhuma espécie encontrada no banco de dados.</p>
             <?php endif; ?>
         </section>
+        <a href="#topo" class="btn-voltar">↑ Voltar Para Cima ↑</a>
     </main>
 
     <footer>
