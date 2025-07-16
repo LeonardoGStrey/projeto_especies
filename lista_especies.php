@@ -255,6 +255,27 @@ $result = $stmt->get_result();
         from { width: 0; }
         to { width: 100%; }
     }
+    .logo a {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+
+    .logo a:hover {
+        color: #00ff95; /* Opcional: muda a cor do texto também */
+    }
+
+    .logo a:hover i.fa-leaf {
+        transform: scale(1.2); /* Aumenta 20% */
+        color: #00ff95; /* Muda para a cor neon ao passar o mouse */
+    }
+
+    .logo i.fa-leaf {
+        transition: all 0.3s ease;
+        font-size: 1.2em; /* Tamanho inicial do ícone */
+    }
     </style>
 </head>
 <body>
