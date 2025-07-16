@@ -32,20 +32,15 @@ body {
 }
 
 header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  background: linear-gradient(to right, #0f211c, #111);
-  padding: 15px 5px;
-  box-shadow: 0 2px 8px rgba(0, 255, 149, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: linear-gradient(to right, #0f211c, #111);
+    padding: auto;
+    
 }
-
-.spacer {
-  height: 30px;
-}
-
 .main-nav {
   display: flex;
   justify-content: space-between;
@@ -77,13 +72,7 @@ header {
 .nav-links {
   display: flex;
   gap: 2rem;
-}
-
-.nav-link {
-  text-decoration: none;
-  color: var(--texto-claro);
-  font-weight: 600;
-  transition: color 0.3s ease, transform 0.3s ease;
+  
 }
 
 .nav-link:hover {
@@ -97,22 +86,55 @@ header {
 }
 
 .logo a:hover span {
-  color: rgb(33, 177, 33);
+  
   transform: scale(1.05);
 }
-
-/* ANIMAÇÃO SUAVE NOS BOTÕES DO HEADER */
 .nav-link {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+  }
+  
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gradient);
+    transition: width 0.3s ease;
+  }
+  
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+/* ESTILO GERAL PARA TODOS OS LINKS */
+a {
+  color: var(--verde-neon);
   text-decoration: none;
-  color: var(--texto-claro);
-  font-weight: 600;
-  transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
-.nav-link:hover {
+a:hover {
   color: var(--verde-neon);
-  transform: translateY(-2px);
-  text-shadow: 0 0 6px var(--verde-neon);
+  text-shadow: 0 0 8px var(--verde-neon);
+}
+ 
+/* LINKS DENTRO DE H2, H3, ETC */
+h2 a, h3 a {
+  color: rgb(88, 245, 88);
+  font-weight: bold;
+  
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+h2 a:hover, h3 a:hover {
+  color: var(--verde-neon);
+  text-shadow: 0 0 8px var(--verde-neon);
 }
 
 
@@ -170,25 +192,7 @@ main h3:hover {
   color: var(--texto-claro);
 }
 
-#ongs a {
-  color: var(--azul-neon);
-  text-decoration: none;
-  transition: 0.3s;
-}
 
-#ongs a:hover {
-  color: var(--verde-neon);
-  text-decoration: underline;
-}
-
-#ongs b {
-  color: var(--verde-neon);
-}
-
-#dd {
-  color: var(--azul-neon);
-  text-decoration: underline;
-}
 
 .btn-voltar {
   display: inline-block;

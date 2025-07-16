@@ -75,7 +75,7 @@ header {
 }
 
 .logo a:hover span {
-  color: rgb(33, 177, 33);
+  
   transform: scale(1.05);
 }
 

@@ -24,7 +24,48 @@
     min-height: 100vh;
     position: relative;
   }
+  .logo a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.5rem;
+  color: var(--verde-neon);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.logo i {
+  font-size: 1.6rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
   
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--texto-claro);
+  font-weight: 600;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--verde-neon);
+  transform: translateY(-2px);
+}
+/* ANIMAÇÃO NO TEXTO "Preservação" */
+.logo a span {
+  color: var(--verde-neon);
+  transition: color 0.4s ease, transform 0.4s ease;
+}
+
+.logo a:hover span {
+  
+  transform: scale(1.05);
+}
+
   .background-animation {
     position: fixed;
     top: 0;
