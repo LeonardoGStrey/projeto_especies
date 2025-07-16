@@ -33,7 +33,7 @@ $result = $stmt->get_result();
 <head>
     <title>Preservação da Fauna e Flora</title>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <script type="module" src="script.js"></script>
@@ -49,7 +49,9 @@ $result = $stmt->get_result();
             padding: auto;
         }
         main{
-            margin-top: 60px;
+            margin-top: 85px;
+            width: 100%;
+            height: auto;
         }
         table {
             width: 100%;
@@ -173,56 +175,108 @@ $result = $stmt->get_result();
         }
 
         .btn-voltar {
-    display: inline-block;
-    background: linear-gradient(to right, var(--verde-neon), var(--azul-neon));
-    color: var(--fundo-escuro);
-    padding: 12px 24px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    margin: 40px 0;
-    transition: all 0.3s ease;
-    border: none;
-}
+            display: inline-block;
+            background: linear-gradient(to right, var(--verde-neon), var(--azul-neon));
+            color: var(--fundo-escuro);
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 40px 0;
+            transition: all 0.3s ease;
+            border: none;
+        }
 
-.btn-voltar:hover {
-    background: linear-gradient(to left, var(--verde-neon), var(--azul-neon));
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,255,149,0.4);
-}
+        .btn-voltar:hover {
+            background: linear-gradient(to left, var(--verde-neon), var(--azul-neon));
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,255,149,0.4);
+        }
+        
         .form-busca button:hover {
             opacity: 0.9;
         }
+        
         .btn-voltar {
-  animation: bounce 2s infinite ease-in-out;
-}
+            animation: bounce 2s infinite ease-in-out;
+        }
+        
+        .main-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(to right, #0f211c, #111);
+            box-shadow: 0 4px 6px rgba(0, 255, 149, 0.1);
+            border-bottom: 1px solid rgba(0, 255, 149, 0.2);
+            position: fixed;
+            width: 100%;
+            top: 0;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--gradient);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            z-index: 999;
+        }
+        
+
+    .nav-links a.nav-link:hover {
+        color: #00ff95; /* Cor verde neon similar à da imagem */
+        transform: translateY(-2px);
+    }
+
+    .nav-links a.nav-link:hover::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #00ff95;
+        animation: underline 0.3s ease-out;
+    }
+
+    @keyframes underline {
+        from { width: 0; }
+        to { width: 100%; }
+    }
     </style>
-    
 </head>
 <body>
     <div class="background-animation"></div>
 
     <header>
         <nav class="main-nav">
-            
             <div class="logo">
-                <i class="fas fa-leaf"></i>
-                <span>Preservação</span>
+                <a href="index.html"><i class="fas fa-leaf"></i>
+                <span>Preservação</span></a>
             </div>
             <div class="nav-links">
-                <a href="index.html" class="nav-link">Início</a>
-                    <a target="_blank" href="https://mail.google.com/mail/?view=cm&fs=1&to=projetopreservacaoses@gmail.com" class="nav-link">Contato</a>
+                <a href="#" class="nav-link" onclick="scrollToTop()">Início</a>
+                <a target="_blank" href="https://mail.google.com/mail/?view=cm&fs=1&to=projetopreservacaoses@gmail.com" class="nav-link">Contato</a>
             </div>
         </nav>
-        
     </header>
 
-    <!-- Hero Section -->
     <main>
-
-        <!-- Lista de Espécies -->
-         <div id="topo"></div>
+        <div id="top"></div>
          
+        <br>
         <section class="container-tabela">
             <div class="topo">
                 <h2>Lista de Espécies</h2>
@@ -277,7 +331,10 @@ $result = $stmt->get_result();
                 <p style="text-align: center; color: var(--text-muted);">Nenhuma espécie encontrada no banco de dados.</p>
             <?php endif; ?>
         </section>
-        <a href="#topo" class="btn-voltar">↑ Voltar Para Cima ↑</a>
+        
+        <a href="#" class="back-to-top" onclick="scrollToTop()" title="Voltar ao topo">
+            <i class="fas fa-arrow-up"></i>
+        </a>
     </main>
 
     <footer>
@@ -302,6 +359,14 @@ $result = $stmt->get_result();
     </footer>
 
     <script>
+        // Função para rolar suavemente até o topo
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
         window.onload = function () {
             const mensagem = document.getElementById('mensagem');
             if (mensagem) {
@@ -309,6 +374,18 @@ $result = $stmt->get_result();
                     mensagem.style.opacity = '0';
                     setTimeout(() => mensagem.remove(), 500);
                 }, 4000);
+            }
+            
+            // Mostrar/ocultar botão de voltar ao topo
+            const backToTopButton = document.querySelector('.back-to-top');
+            if (backToTopButton) {
+                window.addEventListener('scroll', function() {
+                    if (window.pageYOffset > 300) {
+                        backToTopButton.style.display = 'flex';
+                    } else {
+                        backToTopButton.style.display = 'none';
+                    }
+                });
             }
         };
     </script>
