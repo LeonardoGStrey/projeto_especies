@@ -177,9 +177,6 @@ main h3 {
   transition: transform 0.3s ease;
 }
 
-main h3:hover {
-  transform: translateX(8px);
-}
 
 #ongs {
   background-color: var(--fundo-card);
