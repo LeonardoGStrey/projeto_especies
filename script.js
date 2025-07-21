@@ -47,4 +47,16 @@ document.querySelectorAll('a').forEach(link => {
   }
   
   createParticles();
-  
+  const topo = document.getElementById("topo");
+topo.innerHTML = `<div class="scrolling-text">Preservação da Fauna e Flora</div>`;
+document.addEventListener("DOMContentLoaded", () => {
+  const topo = document.getElementById("topo");
+
+  if (topo) {
+    topo.innerHTML = `
+      <div class="scrolling-text">Preservação da Fauna e Flora</div>
+    `;
+  } else {
+    console.warn("⚠️ Elemento #topo não encontrado!");
+  }
+});

@@ -1,12 +1,14 @@
-function loadHTML(selector, url) {
-  fetch(url)
-    .then(res => res.text())
-    .then(html => {
-      document.querySelector(selector).innerHTML = html;
-    })
-    .catch(console.error);
-}
-window.addEventListener("DOMContentLoaded", () => {
-  loadHTML("#site-header", "header.html");
-  loadHTML("#site-footer", "footer.html");
+document.addEventListener("DOMContentLoaded", () => {
+  const topo = document.getElementById("topo");
+
+  if (topo) {
+    topo.innerHTML = `
+      <div class="scrolling-text">Preservação da Fauna e Flora</div>
+    `;
+  } else {
+    console.warn("Elemento com id 'topo' não encontrado.");
+  }
 });
+const topo = document.getElementById("topo");
+topo.innerHTML = `<div class="scrolling-text">Preservação da Fauna e Flora</div>`;
+

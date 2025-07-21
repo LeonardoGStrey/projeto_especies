@@ -114,15 +114,12 @@ header {
  
 /* ESTILO GERAL PARA TODOS OS LINKS */
 a {
-  color: var(--verde-neon);
+  
   text-decoration: none;
   transition: color 0.3s ease, text-shadow 0.3s ease;
 }
  
-a:hover {
-  color: var(--verde-neon);
-  text-shadow: 0 0 8px var(--verde-neon);
-}
+
  
 /* LINKS DENTRO DE H2, H3, ETC */
 h2 a, h3 a {
@@ -133,8 +130,8 @@ h2 a, h3 a {
 }
  
 h2 a:hover, h3 a:hover {
-  color: var(--verde-neon);
-  text-shadow: 0 0 8px var(--verde-neon);
+ 
+  text-shadow: 0 0 8px var(--azul-neon);
 }
  
  
@@ -177,10 +174,7 @@ main h3 {
   transition: transform 0.3s ease;
 }
  
-main h3:hover {
-  transform: translateX(8px);
-}
- 
+
 #ongs {
   background-color: var(--fundo-card);
   padding: 15px;
