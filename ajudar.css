@@ -7,30 +7,30 @@
   --cinza: #b2e7d3;
   --branco: #ffffff;
   --preto: #1a1a1a;
-
+ 
   --text-muted: #cccccc;
   --primary: var(--verde-neon);
   --card-bg: var(--fundo-card);
   --gradient: linear-gradient(to right, var(--verde-neon), var(--azul-neon));
 }
-
+ 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
+ 
 html {
   scroll-behavior: smooth;
 }
-
+ 
 body {
   font-family: 'Segoe UI', system-ui, sans-serif;
   background-color: var(--fundo-escuro);
   color: var(--texto-claro);
   line-height: 1.6;
 }
-
+ 
 header {
     position: fixed;
     top: 0;
@@ -39,7 +39,7 @@ header {
     z-index: 1000;
     background: linear-gradient(to right, #0f211c, #111);
     padding: auto;
-    
+   
 }
 .main-nav {
   display: flex;
@@ -54,7 +54,7 @@ header {
   top: 0;
   z-index: 1000;
 }
-
+ 
 .logo a {
   display: flex;
   align-items: center;
@@ -64,17 +64,17 @@ header {
   text-decoration: none;
   font-weight: bold;
 }
-
+ 
 .logo i {
   font-size: 1.6rem;
 }
-
+ 
 .nav-links {
   display: flex;
   gap: 2rem;
-  
+ 
 }
-
+ 
 .nav-link:hover {
   color: var(--verde-neon);
   transform: translateY(-2px);
@@ -84,9 +84,9 @@ header {
   color: var(--verde-neon);
   transition: color 0.4s ease, transform 0.4s ease;
 }
-
+ 
 .logo a:hover span {
-  
+ 
   transform: scale(1.05);
 }
 .nav-link {
@@ -96,7 +96,7 @@ header {
     transition: color 0.3s ease;
     position: relative;
   }
-  
+ 
   .nav-link::after {
     content: '';
     position: absolute;
@@ -107,18 +107,18 @@ header {
     background: var(--gradient);
     transition: width 0.3s ease;
   }
-  
+ 
   .nav-link:hover::after {
     width: 100%;
   }
-
+ 
 /* ESTILO GERAL PARA TODOS OS LINKS */
 a {
   color: var(--verde-neon);
   text-decoration: none;
   transition: color 0.3s ease, text-shadow 0.3s ease;
 }
-
+ 
 a:hover {
   color: var(--verde-neon);
   text-shadow: 0 0 8px var(--verde-neon);
@@ -128,22 +128,22 @@ a:hover {
 h2 a, h3 a {
   color: rgb(88, 245, 88);
   font-weight: bold;
-  
+ 
   transition: color 0.3s ease, text-shadow 0.3s ease;
 }
-
+ 
 h2 a:hover, h3 a:hover {
   color: var(--verde-neon);
   text-shadow: 0 0 8px var(--verde-neon);
 }
-
-
+ 
+ 
 main {
   width: 100%;
   margin: 110px auto;
   padding: 20px;
 }
-
+ 
 main h1,
 main h1#frs {
   font-size: 2.5rem;
@@ -155,7 +155,7 @@ main h1#frs {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
+ 
 main h2,
 main #ti {
   color: var(--verde-neon);
@@ -164,7 +164,7 @@ main #ti {
   padding-left: 15px;
   border-left: 4px solid var(--azul-neon);
 }
-
+ 
 main h3 {
   color: var(--cinza);
   font-size: 1.2rem;
@@ -176,8 +176,11 @@ main h3 {
   text-align: justify;
   transition: transform 0.3s ease;
 }
-
-
+ 
+main h3:hover {
+  transform: translateX(8px);
+}
+ 
 #ongs {
   background-color: var(--fundo-card);
   padding: 15px;
@@ -188,9 +191,9 @@ main h3 {
   font-size: 1.4rem;
   color: var(--texto-claro);
 }
-
-
-
+ 
+ 
+ 
 .btn-voltar {
   display: inline-block;
   background: var(--gradient);
@@ -205,14 +208,14 @@ main h3 {
   transition: all 0.3s ease;
   animation: bounce 2s infinite ease-in-out;
 }
-
+ 
 .btn-voltar:hover {
   background: linear-gradient(to left, var(--verde-neon), var(--azul-neon));
   transform: translateY(-2px);
   color: var(--branco);
   box-shadow: 0 4px 10px rgba(0, 255, 149, 0.4);
 }
-
+ 
 /* Botão flutuante */
 #voltar {
   position: fixed;
@@ -231,20 +234,20 @@ main h3 {
   transform: translateY(20px);
   transition: all 0.3s ease;
 }
-
+ 
 #voltar.visible {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
   animation: float 3s ease-in-out infinite;
 }
-
+ 
 #voltar:hover {
   background-color: #1abc9c;
   transform: translateY(-3px) scale(1.05);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
-
+ 
 @keyframes float {
   0%, 100% {
     transform: translateY(0);
@@ -253,7 +256,7 @@ main h3 {
     transform: translateY(-5px);
   }
 }
-
+ 
 @keyframes bounce {
   0%, 100% {
     transform: translateY(0);
@@ -262,7 +265,7 @@ main h3 {
     transform: translateY(-6px);
   }
 }
-
+ 
 /* FOOTER */
 footer {
   background: rgba(0, 0, 0, 0.3);
@@ -271,49 +274,49 @@ footer {
   padding: 2rem 1rem;
   margin-top: -50px;
 }
-
+ 
 .footer-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
 }
-
+ 
 .footer-motto {
   font-size: 1.5rem;
   color: var(--verde-neon);
   text-align: center;
 }
-
+ 
 .social-links {
   display: flex;
   gap: 1.5rem;
 }
-
+ 
 .social-link {
   color: var(--text-muted);
   font-size: 1.5rem;
   transition: color 0.3s ease, transform 0.3s ease;
 }
-
+ 
 .social-link:hover {
   color: var(--primary);
   transform: translateY(-3px);
 }
-
+ 
 .team-section {
   text-align: center;
   padding-top: 2rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
-
+ 
 .team-section h3 {
   font-size: 1.2rem;
   color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 2px;
 }
-
+ 
 .github-profiles {
   display: flex;
   justify-content: center;
@@ -321,7 +324,7 @@ footer {
   flex-wrap: wrap;
   margin-top: 10px;
 }
-
+ 
 .github-profile {
   display: flex;
   align-items: center;
@@ -334,22 +337,22 @@ footer {
   transition: all 0.3s ease;
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
-
+ 
 .github-profile:hover {
   background: var(--gradient);
   transform: translateY(-3px);
   box-shadow: 0 5px 15px rgba(0, 255, 149, 0.3);
   border-color: transparent;
 }
-
+ 
 .github-profile i {
   font-size: 1.3rem;
 }
-
+ 
 .github-profile span {
   font-weight: 500;
 }
-
+ 
 /* RESPONSIVO */
 @media (max-width: 768px) {
   .main-nav {
@@ -357,33 +360,34 @@ footer {
     gap: 1rem;
     text-align: center;
   }
-
+ 
   .nav-links {
     flex-direction: column;
     gap: 1rem;
   }
-
+ 
   main h1 {
     font-size: 2rem;
   }
-
+ 
   main h2 {
     font-size: 1.5rem;
   }
-
+ 
   main h3 {
     font-size: 1.1rem;
   }
-
+ 
   .github-profiles {
     flex-direction: column;
   }
-
+ 
   .footer-motto {
     font-size: 1.2rem;
   }
 }
-
+ 
 footer span {
   text-align: center;
 }
+ 
