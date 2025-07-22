@@ -19,16 +19,16 @@ header {
     left: 0;
     width: 100%;
     z-index: 1000;
-    
     padding: auto;
     
 }
+
 .main-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.2rem 2rem;
-
+  background:#111;
   box-shadow: 0 4px 6px rgba(0, 255, 149, 0.1);
   border-bottom: 1px solid rgba(0, 255, 149, 0.2);
   position: fixed;
@@ -36,7 +36,19 @@ header {
   top: 0;
   z-index: 1000;
 }
+@keyframes backgroundPulse {
+    0% { opacity: 0.5; }
+    100% { opacity: 1; }
+  }
 
+
+
+.logo a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
 .logo a {
   display: flex;
   align-items: center;
@@ -46,10 +58,30 @@ header {
   text-decoration: none;
   font-weight: bold;
 }
-
+header a {
+  
+  text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+ 
 .logo i {
   font-size: 1.6rem;
 }
+
+
+.logo a:hover i.fa-leaf {
+  transform: scale(1.1);
+
+}
+
+.logo i.fa-leaf {
+  transition: all 0.3s ease;
+  font-size: 1.2em;
+}
+
+
+
+
 
 .nav-links {
   display: flex;
@@ -69,15 +101,7 @@ header {
   transform: translateY(-2px);
 }
 /* ANIMAÇÃO NO TEXTO "Preservação" */
-.logo a span {
-  color: var(--verde-neon);
-  transition: color 0.4s ease, transform 0.4s ease;
-}
 
-.logo a:hover span {
-  
-  transform: scale(1.05);
-}
 
 
 
@@ -99,11 +123,11 @@ h1 {
     font-size: 2.5em;
     text-align: center;
     margin: 20px 0;
-    font-weight: bold;
+
     background: linear-gradient(to right, var(--verde-neon), var(--azul-neon));
     background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+
+
 }
 
 h1#pp {
@@ -118,7 +142,7 @@ h1#obj {
     font-weight: bold;
     background: linear-gradient(to right, var(--verde-neon), var(--azul-neon));
     background-clip: text;
-    -webkit-text-fill-color: transparent;
+
     margin-top: 50px;
 }
 
