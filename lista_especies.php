@@ -289,6 +289,8 @@ $result = $stmt->get_result();
             </div>
             <div class="nav-links">
                 <a href="#" class="nav-link" onclick="scrollToTop()">Início</a>
+                <a href="artigo_cientifico.html" class="nav-link">Espécies</a>
+                <a href="ajudar.html" class="nav-link">Como Ajudar</a>
                 <a target="_blank" href="https://mail.google.com/mail/?view=cm&fs=1&to=projetopreservacaoses@gmail.com" class="nav-link">Contato</a>
             </div>
         </nav>
