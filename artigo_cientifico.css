@@ -100,7 +100,7 @@ header a {
   color: var(--verde-neon);
   transform: translateY(-2px);
 }
-/* ANIMAÇÃO NO TEXTO "Preservação" */
+
 
 
 
@@ -233,7 +233,7 @@ ul {
 }
 
 
-/* FOOTER */
+
 footer {
   background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(10px);
@@ -322,7 +322,7 @@ footer {
   font-weight: 500;
 }
 
-/* RESPONSIVO */
+
 @media (max-width: 768px) {
   .main-nav {
     flex-direction: column;

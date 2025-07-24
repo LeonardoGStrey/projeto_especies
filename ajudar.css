@@ -94,7 +94,7 @@ header {
   color: var(--verde-neon);
   transform: translateY(-2px);
 }
-/* ANIMAÇÃO NO TEXTO "Preservação" */
+
 .logo a span {
   color: var(--verde-neon);
   transition: color 0.4s ease, transform 0.4s ease;
@@ -127,7 +127,7 @@ header {
     width: 100%;
   }
  
-/* ESTILO GERAL PARA TODOS OS LINKS */
+
 a {
   
   text-decoration: none;
@@ -136,7 +136,7 @@ a {
  
 
  
-/* LINKS DENTRO DE H2, H3, ETC */
+
 h2 a, h3 a {
   color: rgb(88, 245, 88);
   font-weight: bold;
@@ -226,7 +226,7 @@ main h3 {
   box-shadow: 0 4px 10px rgba(0, 255, 149, 0.4);
 }
  
-/* Botão flutuante */
+
 #voltar {
   position: fixed;
   bottom: 30px;
@@ -276,7 +276,7 @@ main h3 {
   }
 }
  
-/* FOOTER */
+
 footer {
   background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(10px);
@@ -363,7 +363,6 @@ footer {
   font-weight: 500;
 }
  
-/* RESPONSIVO */
 @media (max-width: 768px) {
   .main-nav {
     flex-direction: column;

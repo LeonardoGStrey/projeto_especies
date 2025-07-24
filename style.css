@@ -55,7 +55,7 @@
   color: var(--verde-neon);
   transform: translateY(-2px);
 }
-/* ANIMAÇÃO NO TEXTO "Preservação" */
+
 .logo a span {
   color: var(--verde-neon);
   transition: color 0.4s ease, transform 0.4s ease;
@@ -494,9 +494,7 @@
     font-size: 0.95rem;
   }
 }
-/* Adicione estas regras ao seu arquivo CSS existente */
 
-/* Efeito hover para os links de navegação */
 .nav-link {
   position: relative;
   text-decoration: none;
@@ -524,7 +522,6 @@
   to { width: 100%; }
 }
 
-/* Efeito hover para o logo (ícone + texto) */
 .logo a {
   display: flex;
   align-items: center;
