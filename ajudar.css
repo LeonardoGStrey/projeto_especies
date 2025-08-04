@@ -35,10 +35,63 @@ header {
     position: fixed;
     top: 0;
     left: 0;
+<<<<<<< Updated upstream
     width: 100%;
     z-index: 1000;
     background: #111;
     padding: auto;
+=======
+    width: auto;
+    background: linear-gradient(to right, #0f211c, #111);
+    
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 80px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--verde-neon);
+}
+
+.logo i {
+    margin-right: 10px;
+    font-size: 1.8rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--verde-neon);
+}
+
+
+
+
+footer {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+>>>>>>> Stashed changes
    
 }
 .logo a {
