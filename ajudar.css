@@ -35,12 +35,10 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-<<<<<<< Updated upstream
     width: 100%;
     z-index: 1000;
     background: #111;
     padding: auto;
-=======
     width: auto;
     background: linear-gradient(to right, #0f211c, #111);
     
@@ -91,7 +89,6 @@ footer {
     background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(10px);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
->>>>>>> Stashed changes
    
 }
 .logo a {
